@@ -1,0 +1,292 @@
+/* SET UP */
+@import url(./setup/vars.css);
+@import url(./setup/typography.css);
+
+/* BASE */
+@import url(./basic/helpers.css);
+
+/* COMPONENTS */
+
+
+/* -------------------base------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat-Regular, sans-serif;
+    color: var(--clr1);
+    line-height: 1.25rem;
+}
+
+body {
+    margin: 0;
+}
+
+/* -------------------layout------------------- */
+
+.main-layout>*:not(.full) {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* -------------------header------------------- */
+
+.main-header {
+    position: sticky;
+    z-index: 1;
+    background-color: var(--clr2);
+}
+
+.main-header .logo {
+    width: 150px;
+}
+
+.main-header .main-nav ul li a {
+    text-decoration: none;
+    color: var(--clr0);
+    cursor: pointer;
+    margin: auto;
+    display: inline-block;
+    padding: 15px;
+    transition: color .3s, box-shadow .3s;
+}
+
+.main-header .main-nav ul li a:hover {
+    /* border-bottom: 1px solid var(--clr0); */
+    color: black;
+    box-shadow: inset 0 -2px 0 var(--clr1);
+
+}
+
+/* -------------------filter------------------- */
+
+.filter-grid-container {
+    padding: 20px 0;
+}
+
+/* -------------------gallery------------------- */
+
+.gallery {
+    background-color: var(--clr3);
+}
+
+.gallery-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    gap: 15px;
+    padding: 50px 0;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gallery-grid-container img {
+    width: 220px;
+}
+
+.gallery-grid-container img:hover {
+    box-shadow: 0px 0px 5px 3px var(--clr2);
+}
+
+/* -------------------about me------------------- */
+
+.about-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 50px 0;
+}
+
+.about-me .shani {
+    width: 200px;
+    align-self: center;
+    justify-self: start;
+}
+
+.about-me .about {
+    padding-left: 30px;
+    align-self: center;
+    justify-self: start;
+}
+
+.about-me .about a img {
+    padding: 3px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: var(--clr2);
+}
+
+.about-me .about a img:hover {
+    background-color: var(--clr1);
+}
+
+/* -------------------editor------------------- */
+
+.editor {
+    padding: 50px 0;
+    background-color: var(--clr3);
+
+}
+
+.editor-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+canvas {
+    height: 350px;
+    width: 350px;
+    align-self: center;
+    border: 1px solid black;
+    background-color: var(--clr0);
+    border-radius: 5px;
+}
+
+.edit-options {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.style-btns {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "increase   decrease    left-align    center-align    right-align"
+        "select     select      select        font            color-palette"
+}
+
+.increase {
+    grid-area: increase;
+}
+
+.decrease {
+    grid-area: decrease;
+}
+
+.left-align {
+    grid-area: left-align;
+}
+
+.center-align {
+    grid-area: center-align;
+}
+
+.right-align {
+    grid-area: right-align;
+}
+
+.select-font-family {
+    grid-area: select;
+}
+
+.stroke-color {
+    grid-area: font;
+}
+
+.fill-color {
+    grid-area: color-palette;
+}
+
+.edit-options img {
+    width: 25px;
+}
+
+.text-editor {
+    font-family: Montserrat-Regular, sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+button,
+select {
+    background-color: var(--clr0);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-family: Montserrat-Regular, sans-serif;
+}
+
+.share-download button {
+    background-color: var(--clr2);
+    width: 100px;
+}
+
+select {
+    width: 155px;
+}
+
+button:hover,
+select:hover {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.405);
+}
+
+
+
+/* -------------------footer------------------- */
+
+.main-footer {
+    padding: 30px;
+    background-color: var(--clr2);
+    text-align: center;
+}
+
+.main-footer .logo {
+    width: 150px;
+}
+
+.main-footer p {
+    margin: 20px 0 0 0;
+}
+
+/* -------------------Media query------------------- */
+
+/* mobile only */
+@media (max-width: 700px) {
+    .main-layout>*:not(.full) {
+        margin: 0 1.5rem;
+    }
+
+}
+
+/* small */
+@media (min-width: 700px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--s);
+    }
+
+    .editor-grid-container canvas {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+/* medium */
+@media (min-width: 900px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--m);
+    }
+
+    .editor-grid-container canvas {
+        height: 450px;
+        width: 450px;
+    }
+}
+
+
+/* large */
+@media (min-width: 1200px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--l);
+    }
+
+    .editor-grid-container canvas {
+        height: 500px;
+        width: 500px;
+    }
+}
