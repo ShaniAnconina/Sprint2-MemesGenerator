@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="main-layout">
+
+    <header class="main-header full main-layout ">
+        <div class="header-grid-container">
+            <img src="img/LOGO.png" class="logo item item1">
+            <nav class="main-nav item item2">
+                <ul class="clean-list">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Memes</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="filter">
+        <div class="filter-grid-container">
+            <input type="text" class="search-box" placeholder="Search book by name.."
+                onkeyup="onSetFilterBy({searchBox: this.value})" />
+        </div>
+    </section>
+
+    <section class="gallery full">
+        <div class="gallery-grid-container">
+            <img src="./img/1.jpg">
+            <img src="./img/2.jpg">
+            <img src="./img/3.jpg">
+            <img src="./img/4.jpg">
+            <img src="./img/5.jpg">
+            <img src="./img/6.jpg">
+            <img src="./img/7.jpg">
+            <img src="./img/8.jpg">
+            <img src="./img/9.jpg">
+            <img src="./img/10.jpg">
+            <img src="./img/11.jpg">
+            <img src="./img/12.jpg">
+        </div>
+    </section>
+    
+        <section class="editor">
+            <div class="editor-grid-container flex">
+                <canvas id="my-canvas" height="450" width="450"></canvas>
+
+            </div>
+        </section>
+    
+    <section class="about-me about-grid-container">
+        <img src="./img/shani.png" alt="">
+        <div class="about">
+            <h3>Shani Anconina</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat nostrum ipsa harum odio cupiditate minus assumenda odit laborum. Ipsum exercitationem optio rerum tempora est. Quisquam, enim!</p>
+            <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/linkedin.png"></a>
+            <a href="https://shanianconina.github.io/"><img src="img/github.png"></a>
+        </div>
+    </section>
+
+    <footer class="main-footer full">
+        <img src="img/LOGO.png" class="logo">
+        <p>© all rights reserved 2022</p>
+    </footer>
+
+    <script src="js/controller.js"></script>
+</body>
+
+</html>
