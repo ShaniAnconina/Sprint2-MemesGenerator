@@ -47,21 +47,43 @@
             <img src="./img/12.jpg">
         </div>
     </section>
-    
-        <section class="editor">
-            <div class="editor-grid-container flex">
-                <canvas id="my-canvas" height="450" width="450"></canvas>
 
+    <section class="editor full">
+        <div class="editor-grid-container">
+            <canvas id="meme-canvas" height="450" width="450"></canvas>
+            <div class="edit-options">
+                <input type="text" class="text-editor" name="textEditor" placeholder="Type your text">
+                <div class="crud-btns">
+                    <button class="up-down" onclick="onNextText()"><img src="img/icons/up-down.png"></button>
+                    <button class="create" onclick="onCreateText()"><img src="img/icons/add.png"></button>
+                    <button class="delete" onclick="onDeleteText()"><img src="img/icons/delete.png"></button>
+
+                </div>
+                <div class="style-btns">
+                    <button class="increase"><img src="img/icons/increase.png"></button>
+                    <button class="decrease"><img src="img/icons/decrease.png"></button>
+                    <button class="left-align"><img src="img/icons/left-align.png"></button>
+                    <button class="center-align"><img src="img/icons/center-align.png"></button>
+                    <button class="right-align"><img src="img/icons/right-align.png"></button>
+                    <select name="select" class="select">
+                        <option value="impact">Impact</option>
+                    </select>
+                    <button class="font"><img src="img/icons/font.png"></button>
+                    <button class="color-palette"><img src="img/icons/color-palette.png"></button>
+                </div>
             </div>
-        </section>
-    
+        </div>
+    </section>
+
     <section class="about-me about-grid-container">
         <img src="./img/shani.png" alt="">
         <div class="about">
             <h3>Shani Anconina</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat nostrum ipsa harum odio cupiditate minus assumenda odit laborum. Ipsum exercitationem optio rerum tempora est. Quisquam, enim!</p>
-            <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/linkedin.png"></a>
-            <a href="https://shanianconina.github.io/"><img src="img/github.png"></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat nostrum
+                ipsa harum odio cupiditate minus assumenda odit laborum. Ipsum exercitationem optio rerum tempora est.
+                Quisquam, enim!</p>
+            <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/icons/linkedin.png"></a>
+            <a href="https://shanianconina.github.io/"><img src="img/icons/github.png"></a>
         </div>
     </section>
 

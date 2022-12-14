@@ -108,14 +108,114 @@ body {
 }
 
 /* -------------------editor------------------- */
-.editor-grid-container{
-padding: 5px 0;
+
+.editor {
+    padding: 50px 0;
+    background-color: var(--clr3);
+
+}
+
+.editor-grid-container {
+    width: var(--l);
 }
 
 .editor-grid-container canvas {
     border: 1px solid black;
 }
 
+
+
+.style-btns {
+    display: grid;
+    width: 30%;
+    
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "increase   decrease    left-align    center-align    right-align"
+    "select     select      select        font            color-palette"
+}
+
+.style-btns img,.crud-btns img {
+width: 25px;
+}
+
+.edit-options button{
+    background-color: var(--clr0);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    height: 65px;
+    width: 65px;
+}
+
+.edit-options select{
+    background-color: var(--clr0);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    height: 65px;
+}
+
+.edit-options button:hover,.edit-options select:hover{
+/* border: 1px solid black; */
+box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.405);
+}
+
+/* .up-down {
+    grid-area: up-down;
+
+}
+
+.create {
+    grid-area: create;
+
+}
+
+.delete {
+    grid-area: delete;
+
+} */
+
+.increase {
+    grid-area: increase;
+
+}
+
+.decrease {
+    grid-area: decrease;
+
+}
+
+.left-align {
+    grid-area: left-align;
+
+}
+
+.center-align {
+    grid-area: center-align;
+
+}
+
+.right-align {
+    grid-area: right-align;
+
+}
+
+.select {
+    grid-area: select;
+
+}
+
+.font {
+    grid-area: font;
+
+}
+
+.color-palette {
+    grid-area: color-palette;
+
+}
 
 /* -------------------about me------------------- */
 
