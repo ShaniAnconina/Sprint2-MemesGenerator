@@ -1,7 +1,7 @@
 'use strict'
 
-var gImgId = 0
-var gImgs
+let gImgId = 0
+let gImgs
 
 _createImgs()
 

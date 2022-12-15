@@ -27,7 +27,7 @@ body {
 /* -------------------layout------------------- */
 
 .main-layout>*:not(.full) {
-    max-width: 1060px;
+    max-width: 600px;
     margin-inline: auto;
 }
 
@@ -141,6 +141,7 @@ h2 {
 
 /* -------------------editor------------------- */
 
+
 .editor {
     padding: 50px 0;
     background-color: var(--clr3);
@@ -211,6 +212,15 @@ textarea {
     grid-area: color-palette;
 }
 
+.fill-color input,
+.stroke-color input {
+    cursor: pointer;
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+}
+
 .edit-options img {
     width: 25px;
 }
@@ -239,6 +249,10 @@ select {
     width: 100px;
     font-weight: 600;
 }
+.download a{
+    text-decoration: none;
+    color: inherit;
+}
 
 select {
     width: 155px;
@@ -248,8 +262,6 @@ button:hover,
 select:hover {
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.405);
 }
-
-
 
 /* -------------------footer------------------- */
 
@@ -271,14 +283,13 @@ select:hover {
 
 /* mobile only */
 @media (max-width: 700px) {
-    .main-layout>*:not(.full) {
-        margin: 0 1.5rem;
+    .main-header {
+        padding-inline: 20px;
     }
-
 }
 
 /* small */
-@media (min-width: 700px) {
+@media (min-width: 640px) {
     .main-layout>*:not(.full) {
         max-width: var(--s);
     }
@@ -340,7 +351,7 @@ select:hover {
 
 
 /* large */
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
     .main-layout>*:not(.full) {
         max-width: var(--l);
     }

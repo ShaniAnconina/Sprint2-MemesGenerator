@@ -16,9 +16,9 @@
             <img src="img/LOGO.png" class="logo">
             <nav class="main-nav">
                 <ul class="clean-list flex">
-                    <li><a href="#gallery" onclick="onHideSection()">Gallery</a></li>
+                    <li><a href="#gallery" onclick="onMoveToGalleryScreen()">Gallery</a></li>
                     <li><a href="#memes">Memes</a></li>
-                    <li><a href="#about" onclick="onHideSection()">About</a></li>
+                    <li><a href="#about" onclick="onMoveToGalleryScreen()">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,7 +47,7 @@
                     est.
                     Quisquam, enim!</p>
                 <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/icons/linkedin.png"></a>
-                <a href="https://shanianconina.github.io/"><img src="img/icons/github.png"></a>
+                <a href="https://github.com/ShaniAnconina/"><img src="img/icons/github.png"></a>
             </div>
         </section>
     </div>
@@ -60,7 +60,7 @@
                     <textarea name="textEditor" class="text-editor" cols="35" rows="5" placeholder="Type your text"
                         onkeyup="onSetLineTxt(this.value)"></textarea>
                     <div class="crud-btns">
-                        <button class="switch" onclick="onSwitchText()" title="Switch line"><img
+                        <button class="switch" onclick="onSwitchLine()" title="Switch line"><img
                                 src="img/icons/up-down.png"></button>
                         <button class="create" onclick="onCreateText()" title="Create new line"><img
                                 src="img/icons/add.png"></button>
@@ -69,23 +69,24 @@
 
                     </div>
                     <div class="style-btns grid">
-                        <button class="increase" title="Increase font"><img src="img/icons/increase.png"></button>
-                        <button class="decrease" title="Decrease font"><img src="img/icons/decrease.png"></button>
-                        <button class="left-align" title="Align left"><img src="img/icons/left-align.png"></button>
-                        <button class="center-align" title="Align center"><img
-                                src="img/icons/center-align.png"></button>
-                        <button class="right-align" title="Align right"><img src="img/icons/right-align.png"></button>
-                        <select name="select" class="select-font-family" title="Select font family">
+                        <button class="increase" title="Increase font" onclick="onIncreaseFont()"><img src="img/icons/increase.png"></button>
+                        <button class="decrease" title="Decrease font" onclick="onDecreaseFont()"><img src="img/icons/decrease.png"></button>
+                        <button class="left-align" title="Align left" value="right" onclick="onAlignmentLCR(this.value)"><img src="img/icons/left-align.png"></button>
+                        <button class="center-align" title="Align center" value="center" onclick="onAlignmentLCR(this.value)"><img src="img/icons/center-align.png"></button>
+                        <button class="right-align" title="Align right" value="left" onclick="onAlignmentLCR(this.value)"><img src="img/icons/right-align.png"></button>
+                        <select name="select" class="select-font-family" title="Select font family" onchange="onSetFontFamily(this.value)">
                             <option value="impact">Impact</option>
                             <option value="montserrat">Montserrat</option>
+                            <option value="arial">Arial</option>
                         </select>
-                        <button class="stroke-color" title="Stroke color"><img src="img/icons/font.png"></button>
-                        <button class="fill-color" title="Fill color"><img src="img/icons/color-palette.png"></button>
+                        <button class="stroke-color" title="Stroke color"><input type="color" name="strokeColor" id="stroke-color"><img src="img/icons/font.png"></button>
+                        <button class="fill-color filll" title="Fill color"><input type="color" name="fillColor" id="fill-color" value="#ffffff" oninput="onPickFillColor(this.value)"><img src="img/icons/color-palette.png"></button>
                     </div>
 
                     <div class="share-download">
                         <button class="share">Share</button>
-                        <button class="download" onclick="downloadCanvas(this)">Download</button>
+                        <button class="download"><a href="#" onclick="onDownloadCanvas(this)" download="my-img">Download</a></button>
+                        
                     </div>
                 </div>
             </div>
