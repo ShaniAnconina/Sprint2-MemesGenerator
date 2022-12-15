@@ -23,3 +23,18 @@
     padding: 0;
     list-style-type: none;
 }
+
+/* hide - show helpers */
+
+.show{
+    display: block ;
+}
+
+.hide{
+    display: none ;
+}
+
+/* grid */
+.grid{
+    display: grid;
+}

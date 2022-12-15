@@ -5,95 +5,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Generator</title>
+    <title>Memes Generator</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body class="main-layout" onload="onInitImgs()">
+<body class="main-layout" onload="onInitImgs(),onInitCanvas()">
 
     <header class="main-header full main-layout ">
         <div class="header-container flex space-between align-center">
             <img src="img/LOGO.png" class="logo">
             <nav class="main-nav">
                 <ul class="clean-list flex">
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gallery" onclick="onHideSection()">Gallery</a></li>
                     <li><a href="#memes">Memes</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about" onclick="onHideSection()">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="gallery-screen full main-layout">
+        <section class="filter">
+            <div class="filter-grid-container">
+                <input type="text" class="search-box" placeholder="Search book by name.."
+                    onkeyup="onSetFilterBy({searchBox: this.value})" />
+            </div>
+        </section>
 
-    <section class="filter">
-        <div class="filter-grid-container">
-            <input type="text" class="search-box" placeholder="Search book by name.."
-                onkeyup="onSetFilterBy({searchBox: this.value})" />
-        </div>
-    </section>
+        <section class="gallery full main-layout" id="gallery">
+            <h2>Pick an image</h2>
+            <div class="gallery-grid-container grid">
+            </div>
+        </section>
 
-    <section class="gallery full main-layout" id="gallery">
-        <div class="gallery-grid-container">
-            <img src="./img/1.jpg">
-            <img src="./img/2.jpg">
-            <img src="./img/3.jpg">
-            <img src="./img/4.jpg">
-            <img src="./img/5.jpg">
-            <img src="./img/6.jpg">
-            <img src="./img/7.jpg">
-            <img src="./img/8.jpg">
-            <img src="./img/9.jpg">
-            <img src="./img/10.jpg">
-            <img src="./img/11.jpg">
-            <img src="./img/12.jpg">
-        </div>
-    </section>
+        <section class="about-me about-grid-container grid" id="about">
+            <img src="./img/shani.png" class="shani">
+            <div class="about">
+                <h3>Shani Anconina</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat
+                    nostrum
+                    ipsa harum odio cupiditate minus assumenda odit laborum. Ipsum exercitationem optio rerum tempora
+                    est.
+                    Quisquam, enim!</p>
+                <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/icons/linkedin.png"></a>
+                <a href="https://shanianconina.github.io/"><img src="img/icons/github.png"></a>
+            </div>
+        </section>
+    </div>
+    <div class="editor-screen full hide">
+        <section class="editor full main-layout">
+            <div class="editor-grid-container grid">
+                <canvas id="meme-canvas"></canvas>
+                <div class="edit-options">
+                    <h2>Edit you meme</h2>
+                    <textarea name="textEditor" class="text-editor" cols="35" rows="5" placeholder="Type your text"
+                        onkeyup="onSetLineTxt(this.value)"></textarea>
+                    <div class="crud-btns">
+                        <button class="switch" onclick="onSwitchText()" title="Switch line"><img
+                                src="img/icons/up-down.png"></button>
+                        <button class="create" onclick="onCreateText()" title="Create new line"><img
+                                src="img/icons/add.png"></button>
+                        <button class="delete" onclick="onDeleteText()" title="Delete current line"><img
+                                src="img/icons/delete.png"></button>
 
-    <section class="about-me about-grid-container" id="about">
-        <img src="./img/shani.png" class="shani">
-        <div class="about">
-            <h3>Shani Anconina</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat nostrum
-                ipsa harum odio cupiditate minus assumenda odit laborum. Ipsum exercitationem optio rerum tempora est.
-                Quisquam, enim!</p>
-            <a href="https://www.linkedin.com/in/shani-anconina-894322143/"><img src="img/icons/linkedin.png"></a>
-            <a href="https://shanianconina.github.io/"><img src="img/icons/github.png"></a>
-        </div>
-    </section>
+                    </div>
+                    <div class="style-btns grid">
+                        <button class="increase" title="Increase font"><img src="img/icons/increase.png"></button>
+                        <button class="decrease" title="Decrease font"><img src="img/icons/decrease.png"></button>
+                        <button class="left-align" title="Align left"><img src="img/icons/left-align.png"></button>
+                        <button class="center-align" title="Align center"><img
+                                src="img/icons/center-align.png"></button>
+                        <button class="right-align" title="Align right"><img src="img/icons/right-align.png"></button>
+                        <select name="select" class="select-font-family" title="Select font family">
+                            <option value="impact">Impact</option>
+                            <option value="montserrat">Montserrat</option>
+                        </select>
+                        <button class="stroke-color" title="Stroke color"><img src="img/icons/font.png"></button>
+                        <button class="fill-color" title="Fill color"><img src="img/icons/color-palette.png"></button>
+                    </div>
 
-    <section class="editor full main-layout">
-        <div class="editor-grid-container">
-            <canvas id="meme-canvas"></canvas>
-            <div class="edit-options">
-                <textarea name="textEditor" class="text-editor" cols="35" rows="5"
-                    placeholder="Type your text"></textarea>
-                <div class="crud-btns">
-                    <button class="switch" onclick="onSwitchText()" title="Switch line"><img src="img/icons/up-down.png"></button>
-                    <button class="create" onclick="onCreateText()" title="Create new line"><img src="img/icons/add.png"></button>
-                    <button class="delete" onclick="onDeleteText()" title="Delete current line"><img src="img/icons/delete.png"></button>
-
-                </div>
-                <div class="style-btns">
-                    <button class="increase" title="Increase font"><img src="img/icons/increase.png"></button>
-                    <button class="decrease" title="Decrease font"><img src="img/icons/decrease.png"></button>
-                    <button class="left-align" title="Align left"><img src="img/icons/left-align.png"></button>
-                    <button class="center-align" title="Align center"><img src="img/icons/center-align.png"></button>
-                    <button class="right-align" title="Align right"><img src="img/icons/right-align.png"></button>
-                    <select name="select" class="select-font-family" title="Select font family">
-                        <option value="montserrat">Montserrat</option>
-                        <option value="impact">Impact</option>
-                    </select>
-                    <button class="stroke-color" title="Stroke color"><img src="img/icons/font.png"></button>
-                    <button class="fill-color" title="Fill color"><img src="img/icons/color-palette.png"></button>
-                </div>
-
-                <div class="share-download">
-                    <button class="share">Share</button>
-                    <button class="download">Download</button>
+                    <div class="share-download">
+                        <button class="share">Share</button>
+                        <button class="download" onclick="downloadCanvas(this)">Download</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
     <footer class="main-footer full main-layout">
         <img src="img/LOGO.png" class="logo">
         <p>© all rights reserved 2022</p>
