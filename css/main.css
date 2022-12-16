@@ -177,7 +177,7 @@ textarea {
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "increase   decrease    left-align    center-align    right-align"
-        "select     select      select        font            color-palette"
+        "select     select      select        fill-color      stroke-color"
 }
 
 .increase {
@@ -204,12 +204,12 @@ textarea {
     grid-area: select;
 }
 
-.stroke-color {
-    grid-area: font;
+.fill-color {
+    grid-area: fill-color;
 }
 
-.fill-color {
-    grid-area: color-palette;
+.stroke-color {
+    grid-area: stroke-color;
 }
 
 .fill-color input,

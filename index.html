@@ -62,25 +62,25 @@
                     <div class="crud-btns">
                         <button class="switch" onclick="onSwitchLine()" title="Switch line"><img
                                 src="img/icons/up-down.png"></button>
-                        <button class="create" onclick="onCreateText()" title="Create new line"><img
+                        <button class="create" onclick="onCreateLine()" title="Create new line"><img
                                 src="img/icons/add.png"></button>
-                        <button class="delete" onclick="onDeleteText()" title="Delete current line"><img
+                        <button class="delete" onclick="onDeleteLine()" title="Delete current line"><img
                                 src="img/icons/delete.png"></button>
 
                     </div>
                     <div class="style-btns grid">
                         <button class="increase" title="Increase font" onclick="onIncreaseFont()"><img src="img/icons/increase.png"></button>
                         <button class="decrease" title="Decrease font" onclick="onDecreaseFont()"><img src="img/icons/decrease.png"></button>
-                        <button class="left-align" title="Align left" value="right" onclick="onAlignmentLCR(this.value)"><img src="img/icons/left-align.png"></button>
+                        <button class="left-align" title="Align left" value="left" onclick="onAlignmentLCR(this.value)"><img src="img/icons/left-align.png"></button>
                         <button class="center-align" title="Align center" value="center" onclick="onAlignmentLCR(this.value)"><img src="img/icons/center-align.png"></button>
-                        <button class="right-align" title="Align right" value="left" onclick="onAlignmentLCR(this.value)"><img src="img/icons/right-align.png"></button>
+                        <button class="right-align" title="Align right" value="right" onclick="onAlignmentLCR(this.value)"><img src="img/icons/right-align.png"></button>
                         <select name="select" class="select-font-family" title="Select font family" onchange="onSetFontFamily(this.value)">
                             <option value="impact">Impact</option>
                             <option value="montserrat">Montserrat</option>
                             <option value="arial">Arial</option>
                         </select>
-                        <button class="stroke-color" title="Stroke color"><input type="color" name="strokeColor" id="stroke-color"><img src="img/icons/font.png"></button>
-                        <button class="fill-color filll" title="Fill color"><input type="color" name="fillColor" id="fill-color" value="#ffffff" oninput="onPickFillColor(this.value)"><img src="img/icons/color-palette.png"></button>
+                        <button class="fill-color" title="Fill color"><input type="color" name="fillColor" id="fill-color" value="#ffffff" oninput="onPickFillColor(this.value)"><img src="img/icons/color-palette.png"></button>
+                        <button class="stroke-color" title="Stroke color"><input type="color" name="strokeColor" id="stroke-color" value="#000000" oninput="onPickStrokeColor(this.value)"><img src="img/icons/font.png"></button>
                     </div>
 
                     <div class="share-download">
