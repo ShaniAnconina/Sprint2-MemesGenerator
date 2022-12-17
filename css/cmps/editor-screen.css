@@ -10,13 +10,6 @@
     grid-template-rows: 1fr 1fr;
 }
 
-.canvas-container {
-    background-color: rgb(42, 91, 165);
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-}
-
 canvas {
     height: 300px;
     width: 300px;
