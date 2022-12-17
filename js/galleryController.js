@@ -6,15 +6,15 @@ function onInitImgs() {
 
 function renderGallery() {
     const gImgs = getImgs()
-    // let strHtml =`
-    // <label class="user-upload-img">
-    // <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)"/>
-    // <img src="img/ass-image.PNG">
-    // </label>
-    // `
-    
-    let strHtml = gImgs.map(img => `<img src="./img/${img.id}.jpg" onclick="onImgSelect(${img.id})">`)
-    document.querySelector('.gallery-grid-container').innerHTML = strHtml.join('')
+    let strHtml = `
+    <label class="user-upload-img">
+    <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)"/>
+    <img src="img/ass-image.PNG">
+    </label>
+    `
+
+    strHtml += gImgs.map(img => `<img src="${img.url}" onclick="onImgSelect('${img.url}',${img.id})">`).join('')
+    document.querySelector('.gallery-grid-container').innerHTML = strHtml
 }
 
 function onSearchByKeywords(filterBy) {
@@ -25,17 +25,15 @@ function onSearchByKeywords(filterBy) {
 // ------------------ UPLOAD ------------------ //
 
 function onImgInput(ev) {
-    onUploadImgFromInput(ev,uploadImgToGallery)
-        renderGallery()
+    onUploadImgFromInput(ev, uploadImgToGallery)
 }
 
-function onUploadImgFromInput(ev,onImageReady){
+function onUploadImgFromInput(ev, onImageReady) {
     const reader = new FileReader()
     reader.onload = (event) => {
         let img = new Image()
         img.src = event.target.result
         img.onload = () => onImageReady(img)
-        console.log('img:', img)
     }
     reader.readAsDataURL(ev.target.files[0])
 }

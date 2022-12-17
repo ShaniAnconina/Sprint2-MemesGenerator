@@ -10,9 +10,16 @@
     grid-template-rows: 1fr 1fr;
 }
 
+.canvas-container {
+    background-color: rgb(42, 91, 165);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
 canvas {
-    /* height: 350px;
-    width: 350px; */
+    height: 300px;
+    width: 300px;
     align-self: center;
     justify-self: center;
     border: 1px solid black;
@@ -155,19 +162,19 @@ select:hover {
         grid-template-rows: 1fr;
     }
 
-     /* canvas {
-        height: 340px;
-        width: 340px;
-    } */
+    canvas {
+        height: 300px;
+        width: 300px;
+    }
 }
 
 /* medium */
 @media (min-width: 900px) {
 
-    /* canvas {
+    canvas {
         height: 450px;
         width: 450px;
-    } */
+    }
 
     .editor {
         padding: 138px 0;
@@ -177,11 +184,11 @@ select:hover {
 /* large */
 @media (min-width: 1240px) {
 
-    /* 
+
     canvas {
         height: 500px;
         width: 500px;
-    } */
+    }
 
     .editor {
         padding: 113px 0;

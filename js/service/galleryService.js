@@ -30,7 +30,7 @@ function _createImgs() {
 
 function _createImg(keywords) {
     gImgId++
-    return { id: gImgId, url: `img/${gImgId}.jpg`, keywords }
+    return { id: gImgId, url: `./img/${gImgId}.jpg`, keywords }
 }
 
 function getImgs() {
@@ -55,9 +55,12 @@ function searchByKeywords(filterBy = '') {
 // ------------------ UPLOAD ------------------ //
 
 function uploadImgToGallery (img){
-    gImgs.push({
+    let uplodedImg = ({
         id: gImgs[gImgs.length-1].id+1,
         url: img.src,
         keywords:''
     })
+
+    gImgs.unshift(uplodedImg)
+    renderGallery()
 }

@@ -2,12 +2,12 @@
 
 let gCanvas
 let gCtx
-let gCurrImgId
+let gCurrImgURL
 
 function onInitCanvas() {
     gCanvas = document.getElementById('meme-canvas')
     gCtx = gCanvas.getContext('2d')
-  }
+}
 
 function toggleMenu() {
     document.body.classList.toggle('menu-open')
@@ -16,21 +16,18 @@ function toggleMenu() {
 function renderMeme() {
     const meme = getMeme()
     const img = new Image()
-    img.src = `./img/${gCurrImgId}.jpg`
+    img.src = gCurrImgURL
     img.onload = function () {
         gCanvas.width = this.naturalWidth
         gCanvas.height = this.naturalHeight
         gCtx.drawImage(this, 0, 0)
-        let lineIdx = 0
         meme.lines.forEach(line => {
             drawText(line)
-            lineIdx++
         })
     }
     document.querySelector('.editor-screen').classList.remove('hide')
     document.querySelector('.gallery-screen').classList.add('hide')
     document.querySelector('.text-editor').value = meme.lines[meme.selectedLineIdx].txt
-
 }
 
 function onMoveToGalleryScreen() {
@@ -48,36 +45,37 @@ function drawText(line) {
     let x = line.x
     let y = line.y
 
-        switch (line.align) {
-            case 'left':
-                x = 5
-                gCtx.textAlign = 'left'
-                break
+    switch (line.align) {
+        case 'left':
+            x = 5
+            gCtx.textAlign = 'left'
+            break
 
-            case 'center':
-                x = gCanvas.width / 2
-                gCtx.textAlign = 'center'
-                break
+        case 'center':
+            x = gCanvas.width / 2
+            gCtx.textAlign = 'center'
+            break
 
-            case 'right':
-                x = gCanvas.width - 5
-                gCtx.textAlign = 'right'
-                break
-        }
+        case 'right':
+            x = gCanvas.width - 5
+            gCtx.textAlign = 'right'
+            break
+    }
 
     gCtx.fillText(line.txt, x, y)
     gCtx.strokeText(line.txt, x, y)
 }
 
-function onImgSelect(imgId) {
+function onImgSelect(imgURL,imgId) {
     setImg(imgId)
-    gCurrImgId = imgId
+    gCurrImgURL = imgURL
     renderMeme()
 }
 
 function getCanvas() {
     return gCanvas
 }
+
 // ------------------ CRUD ------------------ //
 
 function onSwitchLine() {
@@ -90,7 +88,7 @@ function onCreateLine() {
     renderMeme()
 }
 
-function onDeleteLine(){
+function onDeleteLine() {
     deleteLine()
     renderMeme()
 }
@@ -132,18 +130,14 @@ function onPickStrokeColor(strokeColor) {
     renderMeme()
 }
 
-function onLineUp(){
+function onLineUp() {
     lineUp()
     renderMeme()
 }
 
-function onLineDown(){
+function onLineDown() {
     lineDown()
     renderMeme()
-}
-
-function onSearchByKeywords(val) {
-    console.log('val:', val)
 }
 
 // ------------------ SHARE & DOWNLOAD ------------------ //

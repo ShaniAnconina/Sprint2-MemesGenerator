@@ -44,16 +44,13 @@ function setImg(imgId) {
 function switchLine() {
     if (gMeme.selectedLineIdx === gMeme.lines.length - 1) {
         gMeme.selectedLineIdx = 0
-        console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
         return
     }
     document.querySelector('.text-editor').value = gMeme.lines[gMeme.selectedLineIdx].txt
     gMeme.selectedLineIdx++
-    console.log('gMeme.selectedLineIdx:', gMeme.selectedLineIdx)
 }
 
 function createLine() {
-    // if (gMeme.selectedLineIdx === 0) return
     const newLine = {
         txt: 'I\'m a new line',
         size: 40,
