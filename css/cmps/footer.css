@@ -1,0 +1,15 @@
+/* -------------------footer------------------- */
+
+.main-footer {
+    padding: 30px;
+    background-color: var(--clr2);
+    text-align: center;
+}
+
+.main-footer .logo {
+    width: 150px;
+}
+
+.main-footer p {
+    margin: 25px 0 0 0;
+}

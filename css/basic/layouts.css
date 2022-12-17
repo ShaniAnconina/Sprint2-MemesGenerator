@@ -1,0 +1,36 @@
+/* -------------------layouts------------------- */
+
+.main-layout>*:not(.full) {
+    max-width: 600px;
+}
+
+/* -------------------Media query------------------- */
+
+/* mobile only */
+@media (max-width: 680px) {
+    .main-layout>*:not(.full) {
+        padding-inline: 30px;
+    }
+}
+
+/* small */
+@media (min-width: 680px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--s);
+        margin-inline: auto;
+    }
+}
+
+/* medium */
+@media (min-width: 900px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--m);
+    }
+}
+
+/* large */
+@media (min-width: 1240px) {
+    .main-layout>*:not(.full) {
+        max-width: var(--l);
+    }
+}

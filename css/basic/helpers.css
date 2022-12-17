@@ -1,4 +1,4 @@
-/* flex helpers */
+/* -------------------flex helpers------------------- */
 
 .flex {
     display: flex;
@@ -16,7 +16,7 @@
     justify-content: center;
 }
 
-/* list helpers */
+/* -------------------list helpers------------------- */
 
 .clean-list {
     margin: 0;
@@ -24,17 +24,14 @@
     list-style-type: none;
 }
 
-/* hide - show helpers */
+/* -------------------hide helper------------------- */
 
-.show{
-    display: block ;
+.hide {
+    display: none;
 }
 
-.hide{
-    display: none ;
-}
+/* -------------------grid helper------------------- */
 
-/* grid */
-.grid{
+.grid {
     display: grid;
 }

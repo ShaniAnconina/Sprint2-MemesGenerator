@@ -1,0 +1,21 @@
+/* -------------------base------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Montserrat-Regular, sans-serif;
+    color: var(--clr1);
+    line-height: 1.25rem;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--clr2);
+}

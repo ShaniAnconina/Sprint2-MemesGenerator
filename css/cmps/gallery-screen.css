@@ -1,0 +1,125 @@
+/* -------------------filter------------------- */
+
+.filter-grid-container {
+    padding: 20px 0;
+}
+
+.search-box {
+    border: 1px black solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* -------------------gallery------------------- */
+
+.gallery {
+    background-color: var(--clr3);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery h2 {
+    display: inline-block;
+    width: 260px;
+    margin: 50px;
+}
+
+.user-upload-img {
+    cursor: pointer;
+}
+
+.user-upload-img input {
+    position: fixed;
+    opacity: 0;
+}
+
+.gallery-grid-container {
+    grid-template-columns: repeat(auto-fit, 155px);
+    gap: 15px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.gallery-grid-container img {
+    width: 155px;
+    transition: box-shadow .3s;
+}
+
+.gallery-grid-container img:hover {
+    box-shadow: 0px 0px 0px 5px var(--clr2);
+    opacity: 70%;
+}
+
+/* -------------------about me------------------- */
+
+.about-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 50px 0;
+}
+
+.about-me .shani {
+    width: 200px;
+    align-self: center;
+    justify-self: center;
+}
+
+.about-me .about {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+}
+
+.about-me .about a img {
+    padding: 3px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: var(--clr1);
+}
+
+.about-me .about a img:hover {
+    background-color: var(--clr2);
+}
+
+
+/* -------------------Media query------------------- */
+
+/* small */
+@media (min-width: 680px) {
+
+    .about-grid-container {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+    }
+
+    .about-me .shani {
+        width: 200px;
+        justify-self: start;
+    }
+
+    .about-me .about {
+        padding-left: 30px;
+        text-align: left;
+        justify-self: start;
+    }
+
+    .gallery-grid-container {
+        grid-template-columns: repeat(auto-fit, 200px);
+    }
+
+    .gallery-grid-container img {
+        width: 200px;
+    }
+}
+
+/* large */
+@media (min-width: 1240px) {
+
+    .gallery-grid-container {
+        grid-template-columns: repeat(auto-fit, 220px);
+    }
+
+    .gallery-grid-container img {
+        width: 220px;
+    }
+}
