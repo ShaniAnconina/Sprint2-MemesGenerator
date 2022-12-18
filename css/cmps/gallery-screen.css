@@ -33,7 +33,7 @@
     opacity: 0;
 }
 
-.gallery .gallery-grid-container {
+.gallery-grid-container {
     grid-template-columns: repeat(auto-fit, 155px);
     gap: 15px;
     justify-content: center;
@@ -62,6 +62,7 @@
     width: 200px;
     align-self: center;
     justify-self: center;
+    border-radius: 50%;
 }
 
 .about-me .about {
@@ -75,7 +76,6 @@
     margin: 0 5px;
     border-radius: 5px;
     background-color: var(--clr1);
-    border-radius: 50%;
 }
 
 .about-me .about a img:hover {

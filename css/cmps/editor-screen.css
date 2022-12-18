@@ -5,12 +5,12 @@
     background-color: var(--clr3);
 }
 
-.editor .editor-grid-container {
+.editor-grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.editor canvas {
+canvas {
     height: 300px;
     width: 300px;
     align-self: center;
@@ -20,17 +20,17 @@
     border-radius: 5px;
 }
 
-.editor textarea {
+textarea {
     resize: none;
 }
 
-.editor .edit-options {
+.edit-options {
     align-self: center;
     justify-self: center;
     text-align: center;
 }
 
-.editor .style-btns {
+.style-btns {
     grid-template-areas:
         "line-up    line-down   switch        create          delete"
         "increase   decrease    left-align    center-align    right-align"
@@ -136,7 +136,7 @@ select {
     width: 155px;
 }
 
-.editor button:hover,
+.gallery button:hover,
 select:hover {
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.405);
 }
