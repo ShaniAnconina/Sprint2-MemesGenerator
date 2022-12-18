@@ -5,11 +5,9 @@
 }
 
 .search-box {
-    border: 1px var(--clr1) solid;
+    border: 1px black solid;
     padding: 10px;
-    border-radius: 30px;
-    font-family: Montserrat-Regular, sans-serif;
-    width: 200px;
+    border-radius: 5px;
 }
 
 /* -------------------gallery------------------- */
@@ -60,11 +58,10 @@
     padding: 50px 0;
 }
 
-.about-me .me {
+.about-me .shani {
     width: 200px;
     align-self: center;
     justify-self: center;
-    border-radius: 50%;
 }
 
 .about-me .about {

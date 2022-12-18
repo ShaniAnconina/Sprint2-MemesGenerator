@@ -9,7 +9,6 @@ html {
     color: var(--clr1);
     line-height: 1.25rem;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 body {
