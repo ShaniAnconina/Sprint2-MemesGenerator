@@ -103,7 +103,7 @@ textarea {
 }
 
 .text-editor {
-    font-family: Montserrat-Regular, sans-serif;
+    font-family: Montserrat-Regular, Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -118,7 +118,7 @@ select {
     height: 45px;
     width: 45px;
     cursor: pointer;
-    font-family: Montserrat-Regular, sans-serif;
+    font-family: Montserrat-Regular, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .share-download button {

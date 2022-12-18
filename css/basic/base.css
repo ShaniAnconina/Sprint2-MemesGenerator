@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: Montserrat-Regular, sans-serif;
+    font-family: Montserrat-Regular, Verdana, Geneva, Tahoma, sans-serif;
     color: var(--clr1);
     line-height: 1.25rem;
     overflow-x: hidden;
