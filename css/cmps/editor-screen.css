@@ -124,7 +124,7 @@ select {
 .share-download button {
     background-color: var(--clr2);
     width: 100px;
-    font-weight: 600;
+    font-family: Montserrat-Bold;
 }
 
 .download a {
