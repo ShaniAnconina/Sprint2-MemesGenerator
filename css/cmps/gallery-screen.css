@@ -8,7 +8,8 @@
     border: 1px var(--clr1) solid;
     padding: 10px;
     border-radius: 30px;
-    font-family: Montserrat-Regular;
+    font-family: Montserrat-Regular, sans-serif;
+    width: 200px;
 }
 
 /* -------------------gallery------------------- */
