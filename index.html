@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes Generator</title>
+    <link rel="icon" type="image/x-icon" href="img/icons/favicon.png">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -19,7 +20,6 @@
             <nav class="main-nav">
                 <ul class="clean-list flex">
                     <li><a href="#gallery" onclick="onMoveToGalleryScreen()">Gallery</a></li>
-                    <!-- <li><a href="#memes">Memes</a></li> -->
                     <li><a href="#about" onclick="onMoveToGalleryScreen()">About</a></li>
                 </ul>
             </nav>
@@ -29,7 +29,7 @@
     <div class="gallery-screen full main-layout">
         <section class="filter">
             <div class="filter-grid-container">
-                <input type="text" class="search-box" placeholder="Search book by name.."
+                <input type="text" class="search-box" placeholder="Search by category"
                     onkeyup="onSearchByKeywords(this.value)" />
             </div>
         </section>
@@ -41,7 +41,7 @@
         </section>
 
         <section class="about-me about-grid-container grid" id="about">
-            <img src="./img/shani.png" class="shani">
+            <img src="./img/shani.png" class="me">
             <div class="about">
                 <h3>Shani Anconina</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fugiat laboriosam, atque placeat
@@ -57,9 +57,7 @@
     <div class="editor-screen full hide">
         <section class="editor full main-layout">
             <div class="editor-grid-container grid">
-                <!-- <div class="canvas-container"> -->
                 <canvas id="meme-canvas" height="500" width="500"></canvas>
-                <!-- </div> -->
                 <div class="edit-options">
                     <h2>Edit you meme</h2>
                     <textarea name="textEditor" class="text-editor" cols="35" rows="5" placeholder="Type your text"

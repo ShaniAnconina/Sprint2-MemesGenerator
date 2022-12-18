@@ -30,13 +30,16 @@
     }
 
     .menu-toggle-btn {
-        color: var(--clr-1);
+        color: var(--clr1);
         background-color: transparent;
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
     }
 
+    .menu-toggle-btn:hover {
+        color: var(--clr0);
+    }
     .main-header .main-nav ul {
         padding-top: 60px;
         top: 0;

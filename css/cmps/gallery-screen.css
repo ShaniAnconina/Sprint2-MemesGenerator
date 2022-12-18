@@ -5,9 +5,9 @@
 }
 
 .search-box {
-    border: 1px black solid;
+    border: 1px var(--clr1) solid;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 30px;
 }
 
 /* -------------------gallery------------------- */
@@ -24,16 +24,16 @@
     margin: 50px;
 }
 
-.user-upload-img {
+.gallery .user-upload-img {
     cursor: pointer;
 }
 
-.user-upload-img input {
+.gallery .user-upload-img input {
     position: fixed;
     opacity: 0;
 }
 
-.gallery-grid-container {
+.gallery .gallery-grid-container {
     grid-template-columns: repeat(auto-fit, 155px);
     gap: 15px;
     justify-content: center;
@@ -58,7 +58,7 @@
     padding: 50px 0;
 }
 
-.about-me .shani {
+.about-me .me {
     width: 200px;
     align-self: center;
     justify-self: center;
@@ -75,6 +75,7 @@
     margin: 0 5px;
     border-radius: 5px;
     background-color: var(--clr1);
+    border-radius: 50%;
 }
 
 .about-me .about a img:hover {
